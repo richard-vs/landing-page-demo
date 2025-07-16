@@ -5,96 +5,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Photographer Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            margin: 0 10px;
-            text-decoration: none;
-        }
-
-        .portfolio {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .portfolio img {
-            width: 300px;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .contact {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .contact form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            max-width: 400px;
-            margin: auto;
-        }
-
-        .contact input,
-        .contact textarea {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        .contact button {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-    </style>
 </head>
 
-<body>
-    <header>
-        <h1>Richard's Photography</h1>
-        <nav>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-        </nav>
+<body class="bg-white text-gray-800 font-sans">
+    <!-- Header -->
+    <header class="bg-gray-900 text-white p-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Richard's Photography</h1>
+            <nav class="space-x-4">
+                <a href="#portfolio" class="hover:text-gray-300 transition-colors">Portfolio</a>
+                <a href="#contact" class="hover:text-gray-300 transition-colors">Contact</a>
+            </nav>
+        </div>
     </header>
 
-    <section id="portfolio" class="portfolio">
-        <img src="https://via.placeholder.com/300" alt="Portfolio Image 1" />
-        <img src="https://via.placeholder.com/300" alt="Portfolio Image 2" />
-        <img src="https://via.placeholder.com/300" alt="Portfolio Image 3" />
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-semibold mb-8">Portfolio</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <img src="https://via.placeholder.com/300" alt="Portfolio Image 1"
+                    class="rounded-lg shadow-lg hover:scale-105 transition-transform" />
+                <img src="https://via.placeholder.com/300" alt="Portfolio Image 2"
+                    class="rounded-lg shadow-lg hover:scale-105 transition-transform" />
+                <img src="https://via.placeholder.com/300" alt="Portfolio Image 3"
+                    class="rounded-lg shadow-lg hover:scale-105 transition-transform" />
+            </div>
+        </div>
     </section>
 
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Your Email" required />
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
+    <!-- Contact Section -->
+    <section id="contact" class="py-12">
+        <div class="container mx-auto px-4 max-w-lg">
+            <h2 class="text-3xl font-semibold mb-6 text-center">Contact Me</h2>
+            <form class="space-y-4">
+                <input type="text" placeholder="Your Name"
+                    class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-gray-900"
+                    required />
+                <input type="email" placeholder="Your Email"
+                    class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-gray-900"
+                    required />
+                <textarea placeholder="Your Message"
+                    class="w-full p-3 border border-gray-300 rounded h-32 focus:outline-none focus:ring-2 focus:ring-gray-900"
+                    required></textarea>
+                <button type="submit"
+                    class="w-full bg-gray-900 text-white p-3 rounded hover:bg-gray-800 transition-colors">Send</button>
+            </form>
+        </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white p-4 text-center">
+        <p>&copy; 2025 Richard's Photography. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>

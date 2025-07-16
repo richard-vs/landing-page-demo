@@ -1,0 +1,15 @@
+/* Custom Styles (optional) */
+body {
+    scroll-behavior: smooth;
+}
+
+h1,
+h2 {
+    letter-spacing: 0.5px;
+}
+
+/* Example Custom Button Animation */
+button:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s ease-in-out;
+}
